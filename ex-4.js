@@ -1,13 +1,18 @@
 const todos = [
-  { topic: "Doing pre-work", completed: true },
-  { topic: "Workout", completed: false },
-  { topic: "Playing computer games", completed: true },
-  { topic: "Relax", completed: false },
-  { topic: "Clean the room", completed: true },
+	{ topic: "Doing pre-work", completed: true },
+	{ topic: "Workout", completed: false },
+	{ topic: "Playing computer games", completed: true },
+	{ topic: "Relax", completed: false },
+	{ topic: "Clean the room", completed: true },
 ];
 
 function getCompletedTodo(todos) {
-  // Start coding here
+	// Start coding here
+	const todoList = [];
+	todos.filter((todos) => {
+		todos.completed ? todoList.push(todos) : todos;
+	});
+	console.log("todoList: ", todoList);
 }
 
 getCompletedTodo(todos);
